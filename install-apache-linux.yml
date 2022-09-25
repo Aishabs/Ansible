@@ -1,0 +1,16 @@
+- name: Install Apache on Web servers
+  hosts:
+    - AmzLinuxservers
+  tasks:
+    - name: Install Apache on amazon server
+      yum:
+        name: "httpd"
+        state: present
+        update_cache: yes
+      become: true
+    - name: Starting apache on amazon server
+      service:
+        name: "httpd"
+        state: started
+        enabled: yes
+      become: true

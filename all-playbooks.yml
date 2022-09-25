@@ -1,0 +1,3 @@
+- import_playbook: install-apache-linux.yml
+- import_playbook: install-apache-ubuntu.yml
+- import_playbook: copy-file-html.yml
